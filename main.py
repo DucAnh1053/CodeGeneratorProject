@@ -5,9 +5,12 @@ from decoder import Decoder
 from model import MyModel, augment_tokenize_python_code
 import uvicorn
 
+import warnings
+warnings.filterwarnings('ignore')
+
 
 model = MyModel(model_path="model.pt", src_path="src.pt", trg_path="trg.pt")
-print("Model đã load thành công")
+# print("Model đã load thành công")
 app = FastAPI()
 
 
